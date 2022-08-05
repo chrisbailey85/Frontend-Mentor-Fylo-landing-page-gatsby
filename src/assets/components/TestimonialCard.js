@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import { card, user } from "../css/testimonial-card.module.css"
+import { card, user, user__image } from "../css/testimonial-card.module.css"
 const query = graphql`
   query {
     allFile(filter: { extension: { ne: "svg" } }) {
@@ -25,7 +25,14 @@ const TestimonialCard = ({ text, name, job, imageName }) => {
         {nodes.map((img, idx) => {
           if (imageName === img.name) {
             const image = getImage(img)
-            return <GatsbyImage key={idx} image={image} alt="" />
+            return (
+              <GatsbyImage
+                key={idx}
+                image={image}
+                alt=""
+                className={user__image}
+              />
+            )
           }
           return null
         })}
