@@ -1,0 +1,123 @@
+footer {
+  background-color: var(--footer-bg);
+  padding-top: 10rem;
+}
+.container {
+  padding: 2rem 0;
+  width: min(100% - 2rem, 75rem);
+  margin-inline: auto;
+}
+.footer__logo {
+  margin-bottom: 2rem;
+}
+.location,
+.phone,
+.email__address {
+  display: flex;
+  align-items: flex-start;
+  color: var(--white);
+  font-family: var(--open-sans);
+  font-weight: 400;
+  font-size: 1rem;
+}
+.location p,
+.phone p,
+.email__address p {
+  margin: 0 0rem 2rem 2rem;
+  max-width: 40ch;
+}
+
+.footer__nav ul {
+  list-style-type: none;
+}
+
+.footer__nav li {
+  margin-bottom: 1rem;
+}
+
+.footer__nav li:nth-child(4) {
+  margin-bottom: 2rem;
+}
+.footer__nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-family: var(--open-sans);
+  transition: font-weight 0.3s ease-in-out;
+}
+
+.social__links ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social__links li {
+  padding: 0.5rem;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  transition: border-color 0.5s ease-in-out;
+}
+.social__links li:not(:last-child) {
+  margin-right: 1rem;
+}
+.social__links li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
+}
+.social__links li a:focus {
+  border-radius: 50%;
+  outline-offset: 15px;
+  color: hsl(176, 68%, 64%);
+  transition: color 0.3s ease-in-out;
+}
+
+.attribution {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--white);
+}
+.attribution a {
+  margin-left: 1ch;
+  color: var(--white);
+  transition: color 0.3s ease-in-out;
+}
+@media (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    gap: 2rem;
+  }
+  .footer__logo {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    margin-bottom: 0;
+  }
+
+  .footer__nav ul {
+    column-count: 2;
+  }
+
+  .attribution {
+    grid-column: 1 / -1;
+    grid-row: 3 / -1;
+    margin-top: 0;
+  }
+}
+@media (hover: hover) {
+  .footer__nav a:hover {
+    font-weight: 700;
+  }
+  .social__links li:hover {
+    border-color: hsl(176, 68%, 64%);
+  }
+  .social__links li:hover a,
+  .attribution a:hover {
+    color: hsl(176, 68%, 64%);
+  }
+}

@@ -1,0 +1,14 @@
+.container {
+  width: min(100% - 3rem, 75rem);
+  margin-inline: auto;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    place-items: center;
+  }
+}

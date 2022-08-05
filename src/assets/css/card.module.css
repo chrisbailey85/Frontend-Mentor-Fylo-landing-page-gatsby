@@ -1,0 +1,20 @@
+.card {
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.card h2 {
+  margin: 2rem 0 1rem 0;
+  font-family: var(--raleway);
+}
+.card img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 1024px) {
+  .card p {
+    max-width: 40ch;
+  }
+}

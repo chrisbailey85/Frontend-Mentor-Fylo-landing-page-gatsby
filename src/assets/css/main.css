@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-bg: hsl(218, 28%, 13%);
+  --footer-bg: hsl(216, 53%, 9%);
+  --testimonials-bg: hsl(219, 30%, 18%);
+  --sign-up-bg: hsl(217, 28%, 15%);
+  --intro: hsl(217, 27%, 15%);
+  --cta: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+  --error: hsl(0, 100%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --raleway: "Raleway", sans-serif;
+  --open-sans: "Open Sans", sans-serif;
+}
+/* shows only on screen reader's */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body > * {
+    animation: none !important;
+  }
+}
+
+body {
+  background-color: var(--body-bg);
+  line-height: 1.5;
+}
+a:focus,
+input:focus,
+button:focus {
+  outline: 2px dashed hsl(176, 68%, 64%);
+  outline-offset: 5px;
+}
+p {
+  font-family: var(--open-sans);
+}

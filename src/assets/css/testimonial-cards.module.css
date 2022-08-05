@@ -1,0 +1,25 @@
+.container {
+  width: min(100% - 3rem, 75rem);
+  margin-inline: auto;
+  color: var(--white);
+}
+.container > div {
+  position: relative;
+}
+.container div:first-child:before {
+  content: "";
+  position: absolute;
+  top: -33px;
+  left: 3px;
+  height: 40px;
+  width: 40px;
+  background-image: url("../images/bg-quotes.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    display: flex;
+  }
+}
